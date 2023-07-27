@@ -9,12 +9,28 @@ import {
 } from '@ant-design/icons';
 import { Layout, Menu, Button, theme } from 'antd';
 import Hero from './carosoul';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 const { Header, Sider, Content } = Layout;
 const Navbar = () => {
     const [collapsed, setCollapsed] = useState(false);
     const {
         token: { colorBgContainer },
     } = theme.useToken();
+
+    const router = useRouter();
+    const handleHomeClick = () => {
+        router.push('/');
+    }
+    const handleAccountClick = () => {
+        router.push('/components/Auth/registerPage');
+    }
+    const handleBuilderClick = () => {
+        router.push('/components/PcBuilder/PcBuilderPage');
+    }
+    const handleContactClick = () => {
+        router.push('/components/Contact/contact');
+    }
     return (
         <Layout>
             <Sider trigger={null} collapsible collapsed={collapsed}>
@@ -28,22 +44,28 @@ const Navbar = () => {
                             key: '1',
                             icon: <HomeOutlined />,
                             label: 'Home',
+                            onClick: handleHomeClick
                         },
                         {
                             key: '2',
                             icon: <UserOutlined />,
                             label: 'Account',
+                            onClick: handleAccountClick
+
+
                         },
                         {
                             key: '3',
                             icon: <LaptopOutlined />,
                             label: 'PC Builder',
+                            onClick: handleBuilderClick
                         },
                         {
                             key: '4',
                             icon: <MessageOutlined />,
                             label: 'Contact',
-                        },
+                            onClick: handleContactClick
+                        }
                     ]}
                 />
             </Sider>
@@ -71,7 +93,7 @@ const Navbar = () => {
                     style={{
                         margin: '24px 16px',
                         padding: 24,
-                        minHeight: 500,
+                        minHeight: '100vh',
                         background: colorBgContainer,
                     }}
                 >
@@ -79,7 +101,7 @@ const Navbar = () => {
                     Content
                 </Content>
             </Layout>
-        </Layout>
+        </Layout >
     );
 };
 export default Navbar;
