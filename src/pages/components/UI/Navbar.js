@@ -2,9 +2,10 @@ import React, { useState } from 'react';
 import {
     MenuFoldOutlined,
     MenuUnfoldOutlined,
-    UploadOutlined,
+    MessageOutlined,
     UserOutlined,
-    VideoCameraOutlined,
+    LaptopOutlined,
+    HomeOutlined
 } from '@ant-design/icons';
 import { Layout, Menu, Button, theme } from 'antd';
 import Hero from './carosoul';
@@ -25,18 +26,23 @@ const Navbar = () => {
                     items={[
                         {
                             key: '1',
-                            icon: <UserOutlined />,
-                            label: 'nav 1',
+                            icon: <HomeOutlined />,
+                            label: 'Home',
                         },
                         {
                             key: '2',
-                            icon: <VideoCameraOutlined />,
-                            label: 'nav 2',
+                            icon: <UserOutlined />,
+                            label: 'Account',
                         },
                         {
                             key: '3',
-                            icon: <UploadOutlined />,
-                            label: 'nav 3',
+                            icon: <LaptopOutlined />,
+                            label: 'PC Builder',
+                        },
+                        {
+                            key: '4',
+                            icon: <MessageOutlined />,
+                            label: 'Contact',
                         },
                     ]}
                 />
@@ -46,6 +52,7 @@ const Navbar = () => {
                     style={{
                         padding: 0,
                         background: colorBgContainer,
+
 
                     }}
                 >
