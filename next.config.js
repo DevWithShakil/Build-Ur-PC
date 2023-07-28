@@ -8,6 +8,7 @@ const nextConfig = {
       "i.ibb.co",
       "i.imgur.com",
       "i.pinimg.com",
+
     ],
   },
   env: {

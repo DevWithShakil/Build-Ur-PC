@@ -19,14 +19,15 @@ const Navbar = ({ logout, user, cart, open }) => {
           width={40}
           className="scale-150"
         />
-        <span className="ml-3 text-xl font-extrabold">PC BUILDER</span>
+        <span className="ml-3 text-xl font-extrabold">BUILD CORNER</span>
       </Link>
       <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center font-semibold">
+
         <Link href="/" className="mr-5 hover:text-gray-900">
           HOME
         </Link>
         <Link href="/category/Processor" className="mr-5 hover:text-gray-900">
-          PROCESSOR
+          CPU
         </Link>
         <Link href="/category/Motherboard" className="mr-5 hover:text-gray-900">
           MOTHERBOARD
@@ -35,10 +36,10 @@ const Navbar = ({ logout, user, cart, open }) => {
           RAM
         </Link>
         <Link
-          href={"/category/Power Supply units"}
+          href={"/category/PowerSupply"}
           className="mr-5 hover:text-gray-900"
         >
-          POWER SUPPLY UNIT
+          POWER SUPPLY
         </Link>
         <Link href={"/category/Storage"} className="mr-5 hover:text-gray-900">
           STORAGE DEVICE
@@ -47,11 +48,15 @@ const Navbar = ({ logout, user, cart, open }) => {
           MONITOR
         </Link>
         <Link
-          href={"/category/Graphics Card"}
+          href={"/category/GraphicsCard"}
           className="mr-5 hover:text-gray-900"
         >
           OTHERS
         </Link>
+        <button class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded mr-4">
+          PC BUILDER
+        </button>
+
         {/* <Link
           href={"/category/Peripherals"}
           className="mr-5 hover:text-gray-900"

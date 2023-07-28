@@ -55,7 +55,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <Link
-                    href={"/category/Graphics Card"}
+                    href={"/category/GraphicsCard"}
                     className="text-gray-600 hover:text-gray-800"
                   >
                     Graphics Card
@@ -67,7 +67,7 @@ const Footer = () => {
               <nav className="list-none mb-10 mt-8">
                 <li>
                   <Link
-                    href={"/category/Power Supply Unit"}
+                    href={"/category/PowerSupply"}
                     className="text-gray-600 hover:text-gray-800"
                   >
                     Power Supply Unit
