@@ -71,7 +71,7 @@ const Navbar = ({ logout, user, cart, open }) => {
               className="text-3xl"
             />
           )}
-          <div
+          {/* <div
             className="relative flex items-center justify-center"
             onClick={open}
           >
@@ -85,7 +85,7 @@ const Navbar = ({ logout, user, cart, open }) => {
                 {Object.keys(cart).length}
               </span>
             )}
-          </div>
+          </div> */}
 
           {!user.value && (
             <Link href={"/Login"}>

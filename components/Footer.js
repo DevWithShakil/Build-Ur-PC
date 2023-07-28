@@ -82,12 +82,7 @@ const Footer = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    href={"/category/Peripherals"}
-                    className="text-gray-600 hover:text-gray-800"
-                  >
-                    Peripherals
-                  </Link>
+    
                 </li>
                 <li>
                   <Link

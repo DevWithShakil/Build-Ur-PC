@@ -50,6 +50,8 @@ const Category = ({ products }) => {
               );
             })}
           </div>
+
+
         </div>
       </section>
     </div>
