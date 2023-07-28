@@ -33,7 +33,7 @@ const Navbar = () => {
     }
     return (
         <Layout>
-            <Sider trigger={null} collapsible collapsed={collapsed}>
+            <Sider style={{ height: '100vh' }} trigger={null} collapsible collapsed={collapsed}>
                 <div className="demo-logo-vertical" />
                 <Menu
                     theme="dark"
@@ -89,17 +89,16 @@ const Navbar = () => {
                         }}
                     />
                 </Header>
-                <Content
+                {/* <Content
                     style={{
                         margin: '24px 16px',
                         padding: 24,
-                        minHeight: '100vh',
+                        minHeight: '0vh',
                         background: colorBgContainer,
                     }}
                 >
-                    <Hero />
-                    Content
-                </Content>
+                    <h1 style={{ color: 'red' }}>Hello</h1>
+                </Content> */}
             </Layout>
         </Layout >
     );
