@@ -32,7 +32,7 @@ const Category = ({ products }) => {
                       height={200}
                       width={200}
                       alt="ecommerce"
-                      className="object-center w-full h-full block"
+                      className=""
                       src={item.image}
                     />
                   </div>
@@ -43,7 +43,7 @@ const Category = ({ products }) => {
                     <h2 className="text-gray-900 title-font text-lg font-medium">
                       {item.title}
                     </h2>
-                    <p className="mt-1">₹{item.price}</p>
+                    <p className="mt-1">${item.price}</p>
                   </div>
                 </Link>
               );
