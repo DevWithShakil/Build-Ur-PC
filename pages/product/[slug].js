@@ -52,14 +52,14 @@ const Post = ({ addToCart, products, buyNow }) => {
               height={200}
               width={200}
               alt="ecommerce"
-              className="lg:w-1/2 w-full lg:h-auto object-contain rounded"
+              className="lg:w-1/2 w-full lg:h-auto object-contain rounded pr-10"
               src={products.image}
             />
             <div className="lg:w-1/2 w-full lg:pr-10 lg:py-6 mb-6 lg:mb-0">
               <h2 className="text-sm title-font text-gray-500 tracking-widest">
                 {products.brand}
               </h2>
-              <h1 className="text-gray-900 text-3xl title-font font-medium mb-4">
+              <h1 className="text-gray-900 text-xl title-font font-medium mb-4">
                 {products.title}
               </h1>
 
