@@ -57,19 +57,20 @@ const Post = ({ addToCart, products, buyNow }) => {
             />
             <div className="lg:w-1/2 w-full lg:pr-10 lg:py-6 mb-6 lg:mb-0">
               <h2 className="text-sm title-font text-gray-500 tracking-widest">
-                {products.brand}
+                Category: {products.category}
               </h2>
               <h1 className="text-gray-900 text-xl title-font font-medium mb-4">
                 {products.title}
               </h1>
 
               <p className="leading-relaxed mb-4">{products.desc}</p>
+              <p className="leading-relaxed mb-4"> Available: {products.availableQty} left</p>
 
               <div className="flex">
                 <span className="title-font font-medium text-2xl text-gray-900">
-                  ₹{products.price}
+                  ${products.price}
                 </span>
-                <button
+                {/* <button
                   onClick={() =>
                     addToCart(
                       slug,
@@ -86,8 +87,8 @@ const Post = ({ addToCart, products, buyNow }) => {
                   className="flex ml-auto text-white bg-blue-500 border-0 p-2 focus:outline-none hover:bg-blue-600 rounded"
                 >
                   Add to cart
-                </button>
-                <button
+                </button> */}
+                {/* <button
                   onClick={() =>
                     buyNow(
                       slug,
@@ -103,9 +104,9 @@ const Post = ({ addToCart, products, buyNow }) => {
                   className="p-2 border-1 rounded inline-flex items-center justify-center text-white bg-black ml-4"
                 >
                   Buy Now
-                </button>
+                </button> */}
               </div>
-              <div className="mt-6 flex space-x-2">
+              {/* <div className="mt-6 flex space-x-2">
                 <input
                   type="number"
                   className="px-2 border-2 rounded-lg border-gray-400"
@@ -120,8 +121,8 @@ const Post = ({ addToCart, products, buyNow }) => {
                 >
                   check pincode
                 </button>
-              </div>
-              <div>
+              </div> */}
+              {/* <div>
                 {!service && service != null && (
                   <div className="mt-6 flex space-x-2">
                     <p className="text-red-500">
@@ -136,7 +137,7 @@ const Post = ({ addToCart, products, buyNow }) => {
                     </p>
                   </div>
                 )}
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

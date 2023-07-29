@@ -2,11 +2,12 @@ import Link from 'next/link';
 import { CaretRightOutlined } from '@ant-design/icons';
 import { Button, Collapse, theme } from 'antd';
 import { PlusCircleOutlined } from '@ant-design/icons';
+import BuilderChoose from './BuilderChoose';
 
 const getItems = (panelStyle) => [
     {
         key: '1',
-        label: 'CPU',
+        label: 'PROCESSOR',
         children: <Link href="/category/Processor" className="mr-5 hover:text-gray-900">
             <Button className='bg-blue-600 text-white font-semibold' icon={< PlusCircleOutlined />}>Choose</Button>
         </Link>,
@@ -60,18 +61,31 @@ const pcBuilder = () => {
     };
     return (
 
-        <div className='m-12 bg-slate-500'>
-            <Collapse
-                bordered={false}
-                defaultActiveKey={['1']}
-                expandIcon={({ isActive }) => <CaretRightOutlined rotate={isActive ? 90 : 0} />}
-                style={{
-                    background: token.colorBgContainer,
-                    alignContent: 'center',
-                    alignItems: 'center'
-                }}
-                items={getItems(panelStyle)}
-            />
+        <div>
+            <div>
+                <h1 className='text-2xl font-extrabold text-center mt-12'>BUILD YOU OWN PC</h1>
+            </div>
+            <div className='flex justify-between'>
+
+                <div className='m-12 mb-6'>
+
+                    <Collapse
+                        bordered={false}
+                        defaultActiveKey={['1']}
+                        expandIcon={({ isActive }) => <CaretRightOutlined rotate={isActive ? 90 : 0} />}
+                        style={{
+                            background: token.colorBgContainer,
+
+                        }}
+                        items={getItems(panelStyle)}
+                    />
+                </div>
+                <div className='mr-7 p-8'>
+                    <BuilderChoose />
+
+                </div>
+            </div>
+
         </div>
     );
 };
