@@ -1,9 +1,11 @@
 import { TextField } from "@mui/material";
+import Lottie from "lottie-react";
 import Image from "next/image";
 import Link from "next/link";
 import Router from "next/router";
 import React, { useEffect, useState } from "react";
 import { toast } from "react-toastify";
+import register from '../public/register.json'
 
 const Register = () => {
   const [name, setName] = useState("");
@@ -94,8 +96,11 @@ const Register = () => {
   return (
     <div>
       <section className="bg-gray-50 py-5">
-        <div className="flex flex-col items-center justify-center p-10 mx-auto h-full lg:py-0">
-          <Link
+        <div className="flex justify-around p-10 mx-auto h-full lg:py-0 mt-6">
+          <div>
+            <Lottie animationData={register} loop={true} style={{ height: '350px', marginTop: '80px' }} />
+          </div>
+          {/* <Link
             href="/"
             className="flex items-center mb-6 text-2xl font-semibold text-gray-900"
           >
@@ -107,7 +112,7 @@ const Register = () => {
               alt="logo"
             />
             PC Builder
-          </Link>
+          </Link> */}
           <div className="w-full bg-white rounded-lg shadow md:mt-0 sm:max-w-md">
             <div className="p-6 space-y-2 md:space-y-6 sm:p-8">
               <h1 className="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl">
