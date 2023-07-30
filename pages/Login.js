@@ -5,6 +5,8 @@ import Link from "next/link";
 import Router from "next/router";
 import React, { useEffect, useState } from "react";
 import { toast } from "react-toastify";
+import Lottie from "lottie-react";
+import login from "../public/login.json"
 
 const theme = createTheme({
   palette: {
@@ -74,13 +76,9 @@ const Login = () => {
       <section className="py-10">
         <div className="px-6 h-full text-gray-800">
           <div className="flex xl:justify-center justify-center items-center flex-wrap h-full g-6">
-            <Image
-              height={200}
-              width={200}
-              src="/logo.png"
-              className="w-80 bg-transparent shadow-sm"
-              alt="Sample image"
-            />
+            <div>
+              <Lottie animationData={login} loop={true} style={{ height: '450px' }} />
+            </div>
             <div className="xl:ml-20 xl:w-5/12 lg:w-5/12 md:w-8/12 mb-12 md:mb-0">
               <h1 className="text-3xl font-bold my-6">Login</h1>
               <form>
