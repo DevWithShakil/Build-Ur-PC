@@ -140,8 +140,8 @@ const Footer = () => {
             <p className="text-gray-500 text-sm text-center sm:text-left">
               © 2023 PC BUILDER. —
               <a
-                href="https://www.github.com/kaifcoder"
-                rel="noopener noreferrer"
+                href=""
+                rel=""
                 className="text-gray-600 ml-1"
                 target="_blank"
               >
