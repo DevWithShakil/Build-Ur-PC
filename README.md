@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+
 # BUILD CORNER
 
 ## Description
@@ -42,8 +44,6 @@ BUILD CORNER is a clean and straightforward website for PC parts and components 
 
 ## Screenshots
 
-[Add relevant screenshots of the website]
-
 ## Bonus Features
 
 - The PC Builder page is a protected/private route accessible only to logged-in users.
@@ -51,5 +51,5 @@ BUILD CORNER is a clean and straightforward website for PC parts and components 
 
 ## Author
 
-MD SABBIR REZA SHAFI
+Md. Shakil Khan
 
