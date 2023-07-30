@@ -1,35 +1,55 @@
-# PC Builder Ecommerce Site 
+# BUILD CORNER
 
-## Technology used – 
- * Next.JS,
- * MongoDB,
- * tailwind CSS,
- * Stripe
+## Description
 
-## Features - 
+BUILD CORNER is a clean and straightforward website for PC parts and components built using Next.js. It allows users to build their own PC by selecting various PC components from different categories. The website features a PC Builder tool, Featured Products, and Featured Categories, along with Product Detail pages for each component.
 
- *  User can login, register through there email id
- *  Browse products
- *  Add products to cart
- *  Checkout through stripe payment gateway
+## Deployment URL
 
-## Screen Shots
+[PC Builder](https://build-ur-pc.vercel.app/)
 
-![image](https://github.com/kaifcoder/pc-builder/assets/57701861/8f1c06f6-1aad-410d-b0f3-e5e56faba5d4)
+## Features
 
-<img width="960" alt="image" src="https://github.com/kaifcoder/pc-builder/assets/57701861/b6561390-23d1-4ec2-8431-bc8e712fdb57">
+- **Navbar**: The website has a navigation bar with a "PC Builder" button that redirects users to the PC Builder page. It also includes a Categories dropdown with routes for different PC component categories.
+- **Home Page (SSG)**: The Home page displays 6 random Featured Products, each with image, name, category, price, status, and rating. Clicking on any Featured Product card takes the user to the Product Detail page.
+- **Featured Categories (SSG)**: The Home page showcases 6 Featured Categories. Clicking on any category takes the user to a page displaying at least 3 products of that category. Each product card is clickable and leads to the Product Detail page.
+- **Product Detail Page (SSG)**: The Product Detail page displays detailed information about each PC component, including image, name, category, price, status, description, key features, individual rating, average rating, and reviews.
+- **PC Builder Page (SSR)**: The PC Builder page allows users to choose components from CPU, Motherboard, RAM, Power Supply Unit, Storage Device, and Monitor categories. After adding 5-6 components, the user can click the "Complete Build" button.
+- **Complete Build Button**: The "Complete Build" button is disabled until the user adds at least 5-6 components to the PC Builder.
+- **Protected/Private Route (Bonus)**: The PC Builder page is a protected/private route accessible only to logged-in users. User authentication is implemented using NextAuth with Google/Github login providers.
+- **Success Alert (Bonus)**: Clicking on the "Complete Build" button shows a success alert.
 
-<img width="960" alt="image" src="https://github.com/kaifcoder/pc-builder/assets/57701861/899d95c0-038e-4aac-8e6c-35a55f147a79">
+## Technologies Used
 
-<img width="960" alt="image" src="https://github.com/kaifcoder/pc-builder/assets/57701861/8c93e927-dc9a-4f92-992e-affa483167c5">
+- Next.js
+- Redux (for state management in PC Builder)
+- NextAuth (for user authentication)
+- HTML,Tailwind CSS (with responsive design for mobile and desktop)
 
-<img width="960" alt="image" src="https://github.com/kaifcoder/pc-builder/assets/57701861/33c39f33-22c1-48c3-a1ed-0633162eb7fc">
+## Setup Instructions
 
-<img width="960" alt="image" src="https://github.com/kaifcoder/pc-builder/assets/57701861/e85860d5-f294-44c0-a3b8-51285acb4208">
+1. Clone the repository from GitHub.
+2. Install the required dependencies using `npm install`.
+3. Create a `.env` file and add the necessary environment variables (e.g., API keys for Google/Github login).
+4. Run the development server using `npm run dev`.
 
+## Usage
 
+- Home Page: Displays featured products and categories. Click on any product card or category to explore more.
+- Featured Category Pages: Show products from a specific category. Click on any product card for detailed information.
+- Product Detail Pages: Provide detailed information about each PC component.
+- PC Builder Page: Select components for building a PC. Click on "Choose/Select" buttons to view available components. Click "Add to Builder" to add components to the PC Builder. The "Complete Build" button will be enabled after adding all components.
 
+## Screenshots
 
+[Add relevant screenshots of the website]
 
+## Bonus Features
 
+- The PC Builder page is a protected/private route accessible only to logged-in users.
+- Success alert displayed after clicking the "Complete Build" button.
+
+## Author
+
+MD SABBIR REZA SHAFI
 

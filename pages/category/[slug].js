@@ -1,12 +1,35 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import Products from "@/models/Products";
 import mongoose from "mongoose";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { useContext } from "react";
+import { ItemContext } from "../_app";
+import { toast } from "react-toastify";
 
 const Category = ({ products }) => {
   const router = useRouter();
   const { slug } = router.query;
+
+  const { PcComponent, setPcComponent } = useContext(ItemContext);
+
+
+  const calculateItem = (item) => {
+    const existItem = PcComponent.find(i => i.category === item.category)
+    const existId = PcComponent.find(i => i._id === item._id)
+    if (!existId || !existItem) {
+      setPcComponent((prevData) => [...prevData, item])
+    } else if (existItem) {
+      const existData = PcComponent.filter(i => i._id !== item._id)
+      setPcComponent(...existData, item)
+    }
+    toast.success("Item added Successfully", {
+      position: "top-left",
+    })
+
+  }
+
   return (
     <div>
 
@@ -51,7 +74,7 @@ const Category = ({ products }) => {
                         href={`/pcBuilder`}
                         className="lg:w-1/4 md:w-1/2 p-4 w-full"
                       >
-                        <button
+                        <button onClick={() => calculateItem(item)}
                           class="bg-blue-500 hover:bg-blue-700 mt-5 text-white font-bold py-2 px-4 border border-blue-700 rounded">
                           Add To Build
                         </button>

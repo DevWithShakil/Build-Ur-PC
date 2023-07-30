@@ -3,11 +3,17 @@ import Navbar from "@/components/Navbar";
 import "@/styles/globals.css";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import LoadingBar from "react-top-loading-bar";
 import Cart from "./cart";
+
+import { createContext } from 'react';
+
+export const ItemContext = createContext();
+
+
+
 var jwt = require("jsonwebtoken");
 
 export default function App({ Component, pageProps }) {
@@ -19,6 +25,7 @@ export default function App({ Component, pageProps }) {
   const [key, setKey] = useState(0);
   const [cartOpen, setCartOpen] = useState(false);
 
+
   const logout = () => {
     localStorage.removeItem("token");
     setUser({ value: null });
@@ -28,6 +35,7 @@ export default function App({ Component, pageProps }) {
     });
     router.push("/");
   };
+  const [PcComponent, setPcComponent] = useState([]);
 
   useEffect(() => {
     try {
@@ -134,7 +142,7 @@ export default function App({ Component, pageProps }) {
   };
 
   return (
-    <>
+    <ItemContext.Provider value={{ PcComponent, setPcComponent }}>
       <LoadingBar
         color="#f11946"
         progress={progress}
@@ -187,6 +195,6 @@ export default function App({ Component, pageProps }) {
         {...pageProps}
       />
       <Footer />
-    </>
+    </ItemContext.Provider>
   );
 }
